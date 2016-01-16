@@ -1,0 +1,3 @@
+#!/bin/sh
+
+make && sudo openocd -f interface/cmsis-dap.cfg -f target/at91samdXX.cfg -c "program i2c_slave_bootloader_flash.elf verify reset exit"
